@@ -1,11 +1,6 @@
 <script setup lang="ts">
 // экспортируется автоматически
 
-//объект задачи
-// const props = defineProps({
-//   todo: Object,
-// });
-
 interface Todo {
   id: number;
   text: string;
@@ -25,16 +20,6 @@ function toggleTodo(id: number) {
 //обработчик на удалить
 function removeTodo(id: number) {
   emit("remove", id);
-}
-
-//console.trace("Call stack:");
-//throw new Error("Что-то пошло не так");
-
-try {
-  throw new Error("Что-то пошло не так");
-} catch (e) {
-  console.error("Ошибка:", e);
-  console.log("Call stack:", e.stack);
 }
 </script>
 
