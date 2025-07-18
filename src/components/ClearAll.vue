@@ -22,7 +22,7 @@ function clearAll() {
 
 button {
   padding: 0.5rem 1rem;
-  background-color: crimson;
+  background-color: rgba(60, 29, 235, 0.895);
   color: white;
   border: none;
   border-radius: 6px;
