@@ -7,6 +7,8 @@ interface Todo {
   completed: boolean;
 }
 
+//тригер для гит
+
 const { todo } = defineProps<{ todo: Todo }>();
 
 //связь функции с родителем
