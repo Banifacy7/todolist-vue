@@ -14,13 +14,14 @@ const { todo } = defineProps<{ todo: Todo }>();
 //связь функции с родителем
 const emit = defineEmits(["toggle", "remove"]);
 
-//обработчик на выполнено
-function toggleTodo(id: number) {
-  emit("toggle", id); // отправляем в родиетель
+// Если нужно использовать событие (например, для preventDefault)
+function toggleTodo(e: MouseEvent, id: number) {
+  e.preventDefault(); // пример использования
+  emit("toggle", id);
 }
 
-//обработчик на удалить
-function removeTodo(id: number) {
+function removeTodo(e: MouseEvent, id: number) {
+  e.preventDefault(); // пример использования
   emit("remove", id);
 }
 </script>
@@ -33,7 +34,9 @@ function removeTodo(id: number) {
     }"
   >
     {{ todo.text }}
-    <button @click="toggleTodo(todo.id)">✅</button>
-    <button @click="removeTodo(todo.id)">❌</button>
+
+    <button @click="(e) => toggleTodo(e, todo.id)">✅</button>
+
+    <button @click="(e) => removeTodo(e, todo.id)">❌</button>
   </div>
 </template>
