@@ -4,6 +4,10 @@
     <AddTodo />
     <TodoList />
     <ClearAll />
+    <h3>
+      Commit on 23/7 successful — Vercel automatically deploys the pushed
+      project
+    </h3>
   </div>
 </template>
 
@@ -13,6 +17,8 @@ import Header from "./components/Header.vue";
 import AddTodo from "./components/AddTodo.vue";
 import ClearAll from "./components/ClearAll.vue";
 console.log(" 2 Запустился App.vue");
+
+//Small change to trigger redeploy
 </script>
 
 <style scoped>
